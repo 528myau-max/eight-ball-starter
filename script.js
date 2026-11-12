@@ -33,6 +33,8 @@ if (userQuestion === ""){
   document.getElementById('questionOut').textContent = ''
   document.getElementById('answer').textContent = "The 8Ball needs a question to work, Dummy! "
   document.getElementById('answerType').innerHTML = ''
+    return;
+}
 
 //Get a random number
   
