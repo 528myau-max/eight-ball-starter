@@ -40,7 +40,7 @@ if (userQuestion === ""){
 //Get the magic eight ball's answer
   switch (randomNumber) {
     case 0:
-        eightBall = 'Never;
+        eightBall = 'Never';
         break;
     case 1:
         eightBall = 'Probably Not';
@@ -76,7 +76,7 @@ if (userQuestion === ""){
   } else if (randomNumber <= 6) {
   answerType.textContent = "Yes";
 }
-  else if (randomNumber = 7) {
+  else {
   answerType.textContent = "Try again";
 }
 
