@@ -1,5 +1,5 @@
 :root {
-  --navy: #091f88;
+  --navy: #081e88;
   --black: #050505;
   --white: #fff;
 }
@@ -10,47 +10,45 @@
 
 body {
   margin: 0;
-  background: var(--black);
+  background: var(--navy);
   color: var(--navy);
   font-family: "Poppins", Arial, sans-serif;
 }
 
 .page-header {
-  margin: 20px 0.6% 0;
-  padding: 8px 12px 12px;
-  background: var(--navy);
+  padding: 12px 16px;
   color: var(--white);
   text-align: center;
 }
 
 .page-header h1 {
   margin: 0;
-  font-size: clamp(2.5rem, 5.2vw, 5rem);
+  font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 400;
 }
 
 .workspace {
   min-height: 78vh;
   margin: 0 2%;
-  padding: 28px 14px;
-  border: 12px solid var(--black);
+  padding: 32px 22px;
+  border: 14px solid var(--black);
   background: var(--white);
   display: grid;
-  grid-template-columns: 1.35fr 0.9fr 1.05fr;
+  grid-template-columns: 1.15fr 0.9fr 1.2fr;
   align-items: center;
-  gap: 30px;
+  gap: 28px;
 }
 
 .steps {
   display: grid;
-  gap: 40px;
+  gap: 42px;
 }
 
 .step-card {
   min-height: 130px;
-  padding: 18px 22px;
+  padding: 20px;
   border: 3px dashed var(--black);
-  border-radius: 40% 18% 32% 28%;
+  border-radius: 35% 18% 30% 25%;
   display: flex;
   align-items: center;
   gap: 24px;
@@ -58,8 +56,7 @@ body {
 
 .step-card h2 {
   margin: 0;
-  color: var(--navy);
-  font-size: clamp(1.25rem, 2.4vw, 2.6rem);
+  font-size: clamp(1.2rem, 2.2vw, 2rem);
   font-weight: 700;
 }
 
@@ -68,9 +65,7 @@ body {
   height: 76px;
   flex: 0 0 76px;
   border-radius: 50%;
-  background:
-    radial-gradient(circle, var(--navy) 0 47%, transparent 49%),
-    radial-gradient(circle at 35% 30%, #777, #050505 72%);
+  background: radial-gradient(circle at 35% 30%, #666, #050505 72%);
   color: var(--white);
   display: grid;
   place-items: center;
@@ -78,22 +73,21 @@ body {
 }
 
 .form-panel {
-  padding: 10px 6px;
+  padding: 14px 8px;
   border: 3px solid var(--black);
   border-radius: 16px;
 }
 
 .form-panel label {
   display: block;
-  margin: 0 0 16px;
-  color: var(--navy);
-  font-size: clamp(1rem, 1.6vw, 1.7rem);
+  margin: 0 0 14px;
+  font-size: 1.25rem;
 }
 
 .form-panel input {
   width: 100%;
-  margin-bottom: 20px;
-  padding: 6px;
+  margin-bottom: 22px;
+  padding: 8px;
   border: 3px dotted var(--black);
   border-radius: 18px;
   color: var(--navy);
@@ -102,7 +96,7 @@ body {
 
 .form-panel button {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   border: 0;
   border-radius: 8px;
   background: var(--navy);
@@ -125,7 +119,7 @@ body {
 }
 
 .ball {
-  width: min(100%, 410px);
+  width: min(100%, 340px);
   aspect-ratio: 1;
   margin: 0 auto;
   border-radius: 50%;
@@ -147,9 +141,7 @@ body {
 
 .answer {
   margin: 0;
-  color: var(--white);
-  font-size: clamp(1.2rem, 2.2vw, 2rem);
-  transform: rotate(-10deg);
+  font-size: clamp(1.1rem, 2vw, 2rem);
 }
 
 .answer-type span {
@@ -166,12 +158,10 @@ body {
 .no { background: #c62828; }
 
 .page-footer {
-  margin: 0 0.6%;
-  padding: 4px 12px;
-  background: var(--navy);
+  padding: 6px 12px;
   color: var(--white);
   text-align: center;
-  font-size: clamp(1.2rem, 2.2vw, 2rem);
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
 }
 
 @media (max-width: 800px) {
@@ -190,8 +180,8 @@ body {
   }
 
   .form-panel {
-    width: 100%;
     max-width: 480px;
+    width: 100%;
     margin: auto;
   }
 }
