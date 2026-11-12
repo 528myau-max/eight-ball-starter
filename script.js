@@ -34,12 +34,51 @@ if (userQuestion === ""){
   document.getElementById('answer').textContent = "The 8Ball needs a question to work, Dummy! "
   document.getElementById('answerType').innerHTML = ''
 
+//Get a random number
+  let randomNumber = Math.floor(Math.random() * 8);
 
-// get a random number
+//Get the magic eight ball's answer
+  switch (randomNumber) {
+    case 0:
+        eightBall = 'Never;
+        break;
+    case 1:
+        eightBall = 'Probably Not';
+        break;
+    case 2:
+        eightBall = 'Uncertain';
+        break;
+    case 3:
+        eightBall = '50/50';
+        break;
+    case 4:
+        eightBall = 'Likely';
+        break;
+    case 5:
+        eightBall = 'Yes';
+        break;
+    case 6:
+        eightBall = 'Always';
+        break;
+    case 7:
+        eightBall = 'Ask again';
+        break;
+}
 
-// Get the Magic 8balls answer
+  //Show the eight ball's answer type badge
+  document.getElementById("answer").textContent = eightBall;
 
-// Shows the 8ball answer type badge
+  const answerType = document.getElementById("answerType");
+  if (randomNumber < 2) {
+  answerType.textContent = "No";
+  } else if (randomNumber <= 3) {
+  answerType.textContent = "Maybe";
+  } else if (randomNumber <= 6) {
+  answerType.textContent = "Yes";
+}
+  else if (randomNumber = 7) {
+  answerType.textContent = "Try again";
+}
 
  }
 }
