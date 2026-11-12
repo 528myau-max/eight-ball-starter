@@ -35,8 +35,9 @@ if (userQuestion === ""){
   document.getElementById('answerType').innerHTML = ''
 
 //Get a random number
-  let randomNumber = Math.floor(Math.random() * 8);
-
+const randomNumber = Math.floor(Math.random() * 8);
+let eightBall = '';
+  
 //Get the magic eight ball's answer
   switch (randomNumber) {
     case 0:
@@ -66,8 +67,8 @@ if (userQuestion === ""){
 }
 
   //Show the eight ball's answer type badge
-  document.getElementById("answer").textContent = eightBall;
-
+document.getElementById("answer").textContent = eightBall;
+  
   const answerType = document.getElementById("answerType");
   if (randomNumber < 2) {
   answerType.textContent = "No";
