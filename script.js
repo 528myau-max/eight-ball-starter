@@ -40,7 +40,7 @@ if (userQuestion === ""){
   
   let randomNumber = Math.floor(Math.random() * 8);
 
-  let eightBall = '';
+  let eightBall = 'Never';
 
   //Get the magic eight ball's answer
   switch (randomNumber) {
