@@ -35,51 +35,48 @@ if (userQuestion === ""){
   document.getElementById('answerType').innerHTML = ''
 
 //Get a random number
-const randomNumber = Math.floor(Math.random() * 8);
-let eightBall = '';
   
-//Get the magic eight ball's answer
+  let randomNumber = Math.floor(Math.random() * 8);
+
+  let eightBall = '';
+
+  //Get the magic eight ball's answer
   switch (randomNumber) {
     case 0:
-        eightBall = 'Never';
+        eightBall = 'It is certain';
         break;
     case 1:
-        eightBall = 'Probably Not';
+        eightBall = 'It is decidedly so';
         break;
     case 2:
-        eightBall = 'Uncertain';
+        eightBall = 'Reply hazy try again';
         break;
     case 3:
-        eightBall = '50/50';
+        eightBall = 'Cannot predict now';
         break;
     case 4:
-        eightBall = 'Likely';
+        eightBall = 'Do not count on it';
         break;
     case 5:
-        eightBall = 'Yes';
+        eightBall = 'My sources say no';
         break;
     case 6:
-        eightBall = 'Always';
+        eightBall = 'Outlook not so good';
         break;
     case 7:
-        eightBall = 'Ask again';
+        eightBall = 'Signs point to yes';
         break;
 }
 
   //Show the eight ball's answer type badge
-document.getElementById("answer").textContent = eightBall;
-  
-  const answerType = document.getElementById("answerType");
-  if (randomNumber < 2) {
-  answerType.textContent = "No";
-  } else if (randomNumber <= 3) {
-  answerType.textContent = "Maybe";
-  } else if (randomNumber <= 6) {
-  answerType.textContent = "Yes";
-}
-  else {
-  answerType.textContent = "Try again";
-}
+  document.getElementById("answer").textContent = eightBall;
 
- }
+  const answerType = document.getElementById("answerType");
+  if (randomNumber <= 2) {
+  answerType.textContent = "Yes";
+  } else if (randomNumber <= 5) {
+  answerType.textContent = "Maybe";
+  } else {
+  answerType.textContent = "No";
+}
 }
